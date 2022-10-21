@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32901.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonManagementService.API", "PersonManagementService.API\PersonManagementService.API.csproj", "{5C1E13BB-1FBF-4230-86E9-66C6D6941F01}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonManagementService.DB", "PersonManagementService.DB\PersonManagementService.DB.csproj", "{957A5D60-CB4C-4EDC-9BE1-0985AD58D2FD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5C1E13BB-1FBF-4230-86E9-66C6D6941F01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C1E13BB-1FBF-4230-86E9-66C6D6941F01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C1E13BB-1FBF-4230-86E9-66C6D6941F01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C1E13BB-1FBF-4230-86E9-66C6D6941F01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{957A5D60-CB4C-4EDC-9BE1-0985AD58D2FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{957A5D60-CB4C-4EDC-9BE1-0985AD58D2FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{957A5D60-CB4C-4EDC-9BE1-0985AD58D2FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{957A5D60-CB4C-4EDC-9BE1-0985AD58D2FD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {97031387-950A-4A8C-BFEA-561FE171707A}
+	EndGlobalSection
+EndGlobal
