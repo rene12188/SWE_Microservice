@@ -12,7 +12,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddDbContext<PersonContext>(
     options => options.UseNpgsql(builder.Configuration["ConnectionStrings:Database"]));
-
+Console.WriteLine(builder.Configuration["ConnectionStrings:Database"]);
 builder.Services.AddScoped<PersonRepository>();
 var app = builder.Build();
 
@@ -24,6 +24,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
 app.UseHttpsRedirection();
 
 app.UseAuthorization();

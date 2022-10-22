@@ -37,7 +37,7 @@ namespace PersonManagementService.Controllers
 
 
         [HttpPost]
-        public Guid CreatePerson(PersonDto person)
+        public Guid CreatePerson([FromBody]PersonDto person)
         {
             if (person == null)
             {
