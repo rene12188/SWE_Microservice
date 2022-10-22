@@ -1,6 +1,7 @@
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using PersonManagementService.DB;
+using PersonManagementService.DB.Model;
 using PersonManagementService.Model;
 
 namespace PersonManagementService.Controllers
@@ -23,35 +24,40 @@ namespace PersonManagementService.Controllers
         [HttpGet]
         public IEnumerable<PersonDto> AllPerson()
         {
-            throw new NotImplementedException();
+            return _mapper.Map<IList<Person>, IEnumerable<PersonDto>>(_repository.GetAllPersons());
         }
 
         [HttpGet]
-        [Route("{id:guid}")]
-        public PersonDto GetPersonById(Guid id)
+        [Route("{pid:guid}")]
+        public PersonDto GetPersonById(Guid pid)
         {
-            throw new NotImplementedException();
+            return _mapper.Map<Person, PersonDto>(_repository.GetPersonById(pid));
+
         }
 
 
         [HttpPost]
-        public PersonDto CreatePerson(PersonDto person)
+        public Guid CreatePerson(PersonDto person)
         {
-            throw new NotImplementedException();
+            if (person == null)
+            {
+                throw new NullReferenceException();
+            }
+            return _repository.CreatePerson(_mapper.Map<PersonDto, Person>(person));
         }
 
         [HttpPut]
-        [Route("{id:guid}")]
-        public PersonDto UpdatePerson(Guid id, PersonDto person)
+        [Route("{pid:guid}")]
+        public Guid UpdatePerson(Guid pid, PersonDto person)
         {
-            throw new NotImplementedException();
+            return _repository.UpdatePerson(pid,_mapper.Map<PersonDto, Person>(person));
         }
 
         [HttpDelete]
-        [Route("{id:guid}")]
-        public PersonDto DeletePersonById(Guid id)
+        [Route("{pid:guid}")]
+        public Guid DeletePersonById(Guid pid)
         {
-            throw new NotImplementedException();
+            return _repository.DeletePerson(pid);
         }
     }
 }
