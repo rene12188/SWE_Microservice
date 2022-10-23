@@ -1,0 +1,1 @@
+Just Calling Docker Compose should be enough
