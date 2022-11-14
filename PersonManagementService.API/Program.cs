@@ -1,5 +1,8 @@
-using System.Configuration;
+using System;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using PersonManagementService.DB;
 
 var builder = WebApplication.CreateBuilder(args);

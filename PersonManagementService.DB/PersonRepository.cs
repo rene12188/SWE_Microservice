@@ -1,4 +1,7 @@
-﻿using PersonManagementService.DB.Model;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using PersonManagementService.DB.Model;
 
 namespace PersonManagementService.DB;
 

@@ -1,5 +1,8 @@
+using System;
+using System.Collections.Generic;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using PersonManagementService.DB;
 using PersonManagementService.DB.Model;
 using PersonManagementService.Model;

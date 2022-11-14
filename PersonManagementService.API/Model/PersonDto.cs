@@ -1,4 +1,6 @@
-﻿namespace PersonManagementService.Model;
+﻿using System;
+
+namespace PersonManagementService.Model;
 
 public class PersonDto
 {
