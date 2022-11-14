@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.OpenApi.Models;
 using PersonManagementService.DB;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -17,6 +18,8 @@ builder.Services.AddDbContext<PersonContext>(
     options => options.UseNpgsql(builder.Configuration["ConnectionStrings:Database"]));
 Console.WriteLine(builder.Configuration["ConnectionStrings:Database"]);
 builder.Services.AddScoped<PersonRepository>();
+
+
 var app = builder.Build();
 
 

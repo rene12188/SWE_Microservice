@@ -14,4 +14,5 @@ public class Person
     public DateTime? Birthday { get; set; }
     public string? SocialSecurityNumber { get; set; } = null!;
     public string? PhoneNumber { get; set; } = null!;
+    public List<FinancialProducts>? Products { get; set; } = new List<FinancialProducts>();
 }
